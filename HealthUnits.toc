@@ -1,0 +1,3 @@
+## Interface: 70200
+## Title: HealthUnits
+## Notes: A simple WoW addon to change the units of health from thousands (k) to millions (m).
