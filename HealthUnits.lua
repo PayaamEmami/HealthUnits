@@ -26,7 +26,6 @@ local FormatNumber = function(num)
 end
 
 -- [[ Updates the status text values to formatted numbers ]]
--- NOTE: The following code has not yet been tested. Remove this comment after testing.
 hooksecurefunc(
     "TextStatusBar_UpdateTextStringWithValues",
     function()
