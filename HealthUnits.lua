@@ -4,21 +4,21 @@ local FormatNumber = function(num)
 
     -- Checks empty variable
     if not num then
-        -- Trillion
         return 0
     elseif num >= 1000000000000 then
-        -- Billion
+        -- Trillion
         convertedNumber = string.format("%.2f", (num / 1000000000000)) .. "T"
     elseif num >= 1000000000 then
-        -- Million
+        -- Billion
         convertedNumber = string.format("%.2f", (num / 1000000000)) .. "B"
     elseif num >= 1000000 then
-        -- Thousand
+        -- Million
         convertedNumber = string.format("%.2f", (num / 1000000)) .. "M"
     elseif num >= 1000 then
-        -- Hundreds
+        -- Thousands
         convertedNumber = string.format("%.2f", (num / 1000)) .. "k"
     else
+        -- Hundreds
         convertedNumber = num
     end
 
