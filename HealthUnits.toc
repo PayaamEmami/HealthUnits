@@ -1,3 +1,5 @@
 ## Interface: 70200
 ## Title: HealthUnits
-## Notes: A simple WoW addon to change the units of health from thousands (k) to millions (m).
+## Notes:  A simple WoW addon to properly display the format of status text on health/mana bars.
+
+HealthUnits.lua

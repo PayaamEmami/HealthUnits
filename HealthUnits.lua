@@ -1,4 +1,4 @@
--- [[ FormatNumber: formats the number argument and returns the formatted version (Ex: 6583984 -> 6.58M)]]
+-- [[ FormatNumber: Formats the number argument and returns the formatted version (Ex: 6583984 -> 6.58M)]]
 local FormatNumber = function(num)
     local convertedNumber
 
