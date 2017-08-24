@@ -16,7 +16,7 @@ local FormatNumber = function(num)
         convertedNumber = string.format("%.2f", (num / 1000000)) .. "M"
     elseif num >= 1000 then
         -- Thousands
-        convertedNumber = string.format("%.2f", (num / 1000)) .. "k"
+        convertedNumber = string.format("%.0f", (num / 1000)) .. "k"
     else
         -- Hundreds
         convertedNumber = num
