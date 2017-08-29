@@ -1,4 +1,4 @@
-## Interface: 70200
+## Interface: 70300
 ## Title: HealthUnits
 ## Notes:  A simple WoW addon to properly display the format of status text on health/mana bars.
 
