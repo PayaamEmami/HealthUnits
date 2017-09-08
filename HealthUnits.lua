@@ -48,7 +48,7 @@ hooksecurefunc(
         TargetFrameHealthBar.TextString:SetText(TargetHealth)
         if(TargetMana > 0)
             TargetFrameManaBar.TextString:SetText(TargetMana)
-		end
+        end
 
         FocusFrameHealthBar.TextString:SetText(FocusHealth)
         if(FocusMana > 0)
