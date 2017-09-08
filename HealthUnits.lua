@@ -41,18 +41,18 @@ hooksecurefunc(
 
         -- Updates the frames with formatted values
         PlayerFrameHealthBar.TextString:SetText(PlayerHealth)
-		if(PlayerMana > 0)
-			PlayerFrameManaBar.TextString:SetText(PlayerMana)
-		end
+        if(PlayerMana > 0)
+            PlayerFrameManaBar.TextString:SetText(PlayerMana)
+        end
 		
         TargetFrameHealthBar.TextString:SetText(TargetHealth)
         if(TargetMana > 0)
-			TargetFrameManaBar.TextString:SetText(TargetMana)
+            TargetFrameManaBar.TextString:SetText(TargetMana)
 		end
 
         FocusFrameHealthBar.TextString:SetText(FocusHealth)
-		if(FocusMana > 0)
-			FocusFrameManaBar.TextString:SetText(FocusMana)
-		end
+        if(FocusMana > 0)
+            FocusFrameManaBar.TextString:SetText(FocusMana)
+        end
     end
 )
