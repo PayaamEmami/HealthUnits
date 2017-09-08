@@ -16,7 +16,7 @@ local FormatNumber = function(num)
         convertedNumber = string.format("%.2f", (num / 1000000)) .. "M"
     elseif num >= 1000 then
         -- Thousands
-        convertedNumber = string.format("%.0f", (num / 1000)) .. "k"
+        convertedNumber = string.format("%.0f", (num / 1000)) .. "K"
     else
         -- Hundreds
         convertedNumber = num
@@ -41,17 +41,17 @@ hooksecurefunc(
 
         -- Updates the frames with formatted values
         PlayerFrameHealthBar.TextString:SetText(PlayerHealth)
-        if(PlayerMana > 0)
+        if(UnitMana("player") > 0) then
             PlayerFrameManaBar.TextString:SetText(PlayerMana)
         end
 		
         TargetFrameHealthBar.TextString:SetText(TargetHealth)
-        if(TargetMana > 0)
+        if(UnitMana("target") > 0) then
             TargetFrameManaBar.TextString:SetText(TargetMana)
         end
 
         FocusFrameHealthBar.TextString:SetText(FocusHealth)
-        if(FocusMana > 0)
+        if(UnitMana("focus") > 0) then
             FocusFrameManaBar.TextString:SetText(FocusMana)
         end
     end
