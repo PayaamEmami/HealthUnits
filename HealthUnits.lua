@@ -29,7 +29,7 @@ end
 hooksecurefunc(
     "TextStatusBar_UpdateTextStringWithValues",
     function()
-		-- Unformatted health/mana values (Ex: '29343920')
+        -- Unformatted health/mana values (Ex: '29343920')
         PlayerHealth = UnitHealth("player")
         PlayerMana = UnitMana("player")
 
