@@ -30,15 +30,15 @@ hooksecurefunc(
     "TextStatusBar_UpdateTextStringWithValues",
     function()
 		-- Unformatted health/mana values (Ex: '29343920')
-		PlayerHealth = UnitHealth("player")
-		PlayerMana = UnitMana("player")
-		
-		TargetHealth = UnitHealth("target")
-		TargetMana = UnitMana("target")
-		
-		FocusHealth = UnitHealth("focus")
-		FocusMana = UnitMana("focus")
-	
+        PlayerHealth = UnitHealth("player")
+        PlayerMana = UnitMana("player")
+
+        TargetHealth = UnitHealth("target")
+        TargetMana = UnitMana("target")
+
+        FocusHealth = UnitHealth("focus")
+        FocusMana = UnitMana("focus")
+
         -- Formatted health/mana values (Ex: '29.34M')
         FormattedPlayerHealth = FormatNumber(UnitHealth("player"))
         FormattedPlayerMana = FormatNumber(UnitMana("player"))
