@@ -1,4 +1,4 @@
--- [[ FormatNumber: Formats the number argument and returns the formatted version (Ex: 6583984 -> 6.58M)]]
+-- [[ FormatNumber: Formats the number argument and returns the formatted version (Ex: 6583984 -> 6.58M) ]]
 local FormatNumber = function(num)
     local convertedNumber
 
@@ -29,30 +29,46 @@ end
 hooksecurefunc(
     "TextStatusBar_UpdateTextStringWithValues",
     function()
-        -- Converts numbers and stores into variables
-        PlayerHealth = FormatNumber(UnitHealth("player"))
-        PlayerMana = FormatNumber(UnitMana("player"))
+		-- Unformatted health/mana values (Ex: '29343920')
+		PlayerHealth = UnitHealth("player")
+		PlayerMana = UnitMana("player")
+		
+		TargetHealth = UnitHealth("target")
+		TargetMana = UnitMana("target")
+		
+		FocusHealth = UnitHealth("focus")
+		FocusMana = UnitMana("focus")
+	
+        -- Formatted health/mana values (Ex: '29.34M')
+        FormattedPlayerHealth = FormatNumber(UnitHealth("player"))
+        FormattedPlayerMana = FormatNumber(UnitMana("player"))
 
-        TargetHealth = FormatNumber(UnitHealth("target"))
-        TargetMana = FormatNumber(UnitMana("target"))
+        FormattedTargetHealth = FormatNumber(UnitHealth("target"))
+        FormattedTargetMana = FormatNumber(UnitMana("target"))
 
-        FocusHealth = FormatNumber(UnitHealth("focus"))
-        FocusMana = FormatNumber(UnitMana("focus"))
+        FormattedFocusHealth = FormatNumber(UnitHealth("focus"))
+        FormattedFocusMana = FormatNumber(UnitMana("focus"))
 
         -- Updates the frames with formatted values
-        PlayerFrameHealthBar.TextString:SetText(PlayerHealth)
-        if(UnitMana("player") > 0) then
-            PlayerFrameManaBar.TextString:SetText(PlayerMana)
+        if(PlayerHealth > 0) then
+            PlayerFrameHealthBar.TextString:SetText(FormattedPlayerHealth)
+		end
+        if(PlayerMana > 0) then
+            PlayerFrameManaBar.TextString:SetText(FormattedPlayerMana)
         end
-		
-        TargetFrameHealthBar.TextString:SetText(TargetHealth)
-        if(UnitMana("target") > 0) then
-            TargetFrameManaBar.TextString:SetText(TargetMana)
+        
+        if(TargetHealth > 0) then
+            TargetFrameHealthBar.TextString:SetText(FormattedTargetHealth)
         end
-
-        FocusFrameHealthBar.TextString:SetText(FocusHealth)
-        if(UnitMana("focus") > 0) then
-            FocusFrameManaBar.TextString:SetText(FocusMana)
+        if(TargetMana > 0) then
+            TargetFrameManaBar.TextString:SetText(FormattedTargetMana)
+        end
+        
+        if(FocusHealth > 0) then
+            FocusFrameHealthBar.TextString:SetText(FormattedFocusHealth)
+        end
+        if(FocusMana > 0) then
+            FocusFrameManaBar.TextString:SetText(FormattedFocusMana)
         end
     end
 )
